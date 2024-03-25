@@ -1438,3 +1438,6 @@ class GCT(nn.Module):
         y_norm = (y - mean) / torch.sqrt(var + self.eps)
         y_transform = torch.exp(-(y_norm ** 2 / 2 * self.c))
         return x * y_transform.expand_as(x)
+
+
+
